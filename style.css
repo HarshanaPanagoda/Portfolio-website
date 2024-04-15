@@ -6,11 +6,11 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #f3eed9;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #f3eed9;
 }
 
 html {
@@ -47,11 +47,17 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 15vh; /* gap between nav bar and browser margin*/
+  height: 9vh;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.116); /* box shadow to the bottom */
+  background-color: aqua;
 }
 
 .nav-links {
-  gap: 2rem;
+  gap: 3rem;
   list-style: none;
   font-size: 1.5rem;
 }
@@ -64,9 +70,6 @@ a {
 
 a:hover {
   color: crimson;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: crimson;
 }
 
 .logo {
@@ -99,6 +102,7 @@ a:hover {
   height: 24px;
   width: 30px;
   cursor: pointer;
+  padding-right: 40px;
 }
 
 .hamburger-icon span {
@@ -111,7 +115,6 @@ a:hover {
 .menu-links {
   position: absolute;
   top: 100%;
-  right: 0;
   background-color: rgba(211, 208, 208, 0.999);
   width: fit-content;
   max-height: 0;
@@ -119,6 +122,7 @@ a:hover {
   transition: all 0.3 ease-in-out;
   border-radius: 5%;
   margin-top: 1rem;
+  right: 4ch;
 }
 
 .menu-links a {
@@ -190,13 +194,13 @@ section {
   height: 80vh;
 }
 
-.section__pic-container {
+.profile__section__pic-container {
   display: flex;
   height: 400px;
   width: 400px;
   margin: auto 0;
 }
-.section__pic-container img {
+.profile__section__pic-container img {
   border-radius: 100%;
 }
 
@@ -235,6 +239,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-bottom: 4rem;
 }
 
 .btn {
@@ -242,7 +247,7 @@ section {
   transition: all 300ms ease;
   padding: 1rem;
   width: 8rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 
 .btn-color-2 {
@@ -270,11 +275,6 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
-  gap: 1rem;
-  margin-bottom: 4rem;
-}
-
 /* EXPERIENCE SECTION */
 
 #experience {
@@ -282,7 +282,6 @@ section {
 }
 
 .experience-sub-title {
-  /* rresponsive webdevelopt */
   color: rgb(85, 85, 85);
   font-weight: 600;
   font-size: 1.75rem;
@@ -330,6 +329,20 @@ section {
   color: black;
   border-color: rgb(163, 163, 163);
 }
+.git__project-btn {
+  border-color: transparent;
+}
+.git__icon {
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+.pro__btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 1rem;
+}
 
 /* ABOUT SECTION */
 
@@ -351,10 +364,6 @@ section {
 .about-containers,
 .about-details-container {
   display: flex;
-}
-
-.about-pic {
-  border-radius: 2rem;
 }
 
 .arrow {
@@ -380,60 +389,90 @@ section {
   height: 80%;
 }
 
-.section__pic-container {
-  height: 400px;
+.about__section__pic-container {
+  display: flex;
+}
+.about-pic {
+  border: 6px solid transparent;
+  border-radius: 2rem;
+  height: 300px;
   width: 400px;
-  margin: auto 0;
+  margin: auto;
+}
+
+.text-container {
+  text-align: justify;
 }
 
 /* CONTACT */
 
-#contact {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 70vh;
+.contact-items {
+  display: flex; /* Ensure items are displayed in a row */
+  justify-content: space-between; /* Spread items horizontally */
+  margin: 20px auto; /* Adjust margin as needed */
+  max-width: 1200px; /* Limit width to prevent items from spreading too far */
 }
 
-.contact-info-upper-container {
-  display: flex;
-  justify-content: center;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
-  margin: 2rem auto;
-  padding: 0.5rem;
+.contact-item {
+  flex: 0 0 30%; /* Each item occupies 30% of the container */
+  box-shadow: 0px 0px 18px 0 #0000002c;
+  transition: 0.3s ease box-shadow;
 }
 
-.contact-info-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem;
+.contact-item:hover {
+  box-shadow: 0px 0px 5px 0 #0000002c;
 }
 
-.contact-info-container p {
-  font-size: larger;
+.c__icon img {
+  width: 100px; /* Adjust icon size */
 }
 
-.contact-icon {
-  cursor: default;
+.contact-info p {
+  margin-bottom: 5px; /* Add some space between paragraphs */
 }
 
-.email-icon {
-  height: 2.5rem;
-  width: 2.5rem;
-}
+/*End contact Section */
 
 /* FOOTER SECTION */
 
-footer {
-  height: 26vh;
-  margin: 0 1rem;
+.footer {
+  background-color: #29323c;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
 }
 
-footer p {
-  text-align: center;
+.footer h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  background-color: #29323c;
+}
+
+.footer p {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  background-color: #29323c;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  background-color: #29323c;
+}
+
+.social-icon {
+  margin-top: 10px;
+  background-color: #29323c;
+}
+
+.social-icon a {
+  margin: 0 10px;
+  background-color: #29323c;
+}
+
+.social-icon img {
+  width: 50px;
+  height: 50px;
+  background-color: #29323c;
 }
