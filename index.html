@@ -7,15 +7,16 @@
     <title>Harshana Panagoda Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="icon" href="./assets/main_collection/logo.png">
   </head>
   <body>
     <nav id="desktop-nav">
       <div class="logo">HP</div>
       <div>
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -29,9 +30,9 @@
           <span></span>
         </div>
         <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
@@ -52,18 +53,18 @@
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/HarshanaResume.pdf')"
+            onclick="window.open('./assets/pdf_file/HarshanaResume.pdf')"
           >
             Download CV
           </button>
         </div>
       </div>
       <div class="profile__section__pic-container">
-        <img src="./assets/profilepic.jpg" alt="profile picture" />
+        <img src="./assets/main_collection/profilepic.jpg" alt="profile picture" />
       </div>
     </section>
     <section id="experience">
-      <p class="section__text__p1">what I do,</p>
+      <p class="section__text__p1">What I Do,</p>
       <h1 class="title">Design & Development</h1>
       <p class="description">
         As a front-end developer at the university level, I am passionate about
@@ -73,106 +74,103 @@
         mobile application development. While I am a beginner in this field, I
         am dedicated to honing my skills and embracing new challenges.
       </p>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/html5.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/CSS.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
-              </article>
-
-              <article>
-                <img
-                  src="./assets/javascript.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/typescript.svg"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/reactjs.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/angularjs.jpg"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Angular</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
+      <div class="experience-main-container">
+        <div class="exp-details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="exp-item-container">
+            <article>
+              <img
+                src="./assets/exp_stack/html5.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/exp_stack/CSS.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/exp_stack/javascript.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/exp_stack/typescript.svg"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>TypeScript</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/exp_stack/reactjs.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>React</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/exp_stack/angularjs.jpg"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Angular</h3>
+                <p>Basic</p>
+              </div>
+            </article>
           </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Mobile Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/react-1.svg"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React Native</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/flutter-logo.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Flutter</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
+        </div>
+        <div class="exp-details-container">
+          <h2 class="experience-sub-title">Mobile Development</h2>
+          <div class="exp-item-container">
+            <article>
+              <img
+                src="./assets/exp_stack/react_native.svg"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>React Native</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/exp_stack/flutter.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <div>
+                <h3>Flutter</h3>
+                <p>Basic</p>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -180,24 +178,24 @@
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
+      <div class="project-details-container">
+        <div class="project-grid">
+          <div class="project-card">
+            <div>
               <img
-                src="./assets/project-1.png"
-                alt="Project 1"
+                src="./assets/project_images/project-1.png"
+                alt="Portfolio"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <p>tools,tools, tools, tools</p>
+            <h2 class="project-title">Portfolio Website</h2>
+            <p>html5, css3, javascript</p> 
             <div class="pro__btn-container">
               <button
                 class="git__project-btn"
                 onclick="window.open('https://github.com/', '_blank')">
                 <img
-                  src="./assets/github.png"
+                  src="./assets/project_images/github.png"
                   alt="github icon"
                   class="git__icon"
                 />
@@ -210,22 +208,22 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
+          <div class="project-card">
+            <div>
               <img
-                src="./assets/project-2.png"
+                src="./assets/project_images/project-2.png"
                 alt="Project 2"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <h2 class=" project-title">Project Two</h2>
             <p>tools,tools, tools, tools</p>
             <div class="pro__btn-container">
               <button
                 class="git__project-btn"
                 onclick="window.open('https://github.com/', '_blank')">
                 <img
-                  src="./assets/github.png"
+                  src="./assets/project_images/github.png"
                   alt="github icon"
                   class="git__icon"
                 />
@@ -238,22 +236,22 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
+          <div class="project-card">
+            <div>
               <img
-                src="./assets/project-3.png"
+                src="./assets/project_images/project-3.png"
                 alt="Project 3"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <h2 class=" project-title">Project Three</h2>
             <p>tools,tools, tools, tools</p>
             <div class="pro__btn-container">
               <button
                 class="git__project-btn"
                 onclick="window.open('https://github.com/', '_blank')">
                 <img
-                  src="./assets/github.png"
+                  src="./assets/project_images/github.png"
                   alt="github icon"
                   class="git__icon"
                 />
@@ -266,22 +264,22 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
+          <div class="project-card">
+            <div>
               <img
-                src="./assets/project-3.png"
+                src="./assets/project_images/project-3.png"
                 alt="Project 3"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Four</h2>
+            <h2 class=" project-title">Project Four</h2>
             <p>tools,tools, tools, tools</p>
             <div class="pro__btn-container">
               <button
                 class="git__project-btn"
                 onclick="window.open('https://github.com/', '_blank')">
                 <img
-                  src="./assets/github.png"
+                  src="./assets/project_images/github.png"
                   alt="github icon"
                   class="git__icon"
                 />
@@ -294,34 +292,7 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Five</h2>
-            <p>tools,tools, tools, tools</p>
-            <div class="pro__btn-container">
-              <button
-                class="git__project-btn"
-                onclick="window.open('https://github.com/', '_blank')">
-                <img
-                  src="./assets/github.png"
-                  alt="github icon"
-                  class="git__icon"
-                />
-              </button>
-              <!--second button-->
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://github.com/', '_blank')">
-                Project
-              </button>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>
@@ -330,7 +301,7 @@
       <h1 class="title">About Me</h1>
       <div class="section-container">
         <div class="about__section__pic-container">
-          <img src="./assets/mixer.jpeg" alt="My picture" class="about-pic" />
+          <img src="./assets/main_collection/mixer.jpeg" alt="My picture" class="about-pic" />
         </div>
         <div class="about-details-container">
           <div class="text-container">
@@ -364,24 +335,22 @@
         <div class="contact-item">
           <div class="c__icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
           <div class="contact-info">
-            <p>Phone</p>
-            <p>+1 234 123 1234</p>
-            <p>+1 234 123 1234</p>
+            <h6> <bold>Phone</bold></h6>
+            <p>+94 70 492 0099</p>
           </div>
         </div>
         <div class="contact-item">
           <div class="c__icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
           <div class="contact-info">
-            <p>Email</p>
-            <p>info@gmail.com</p>
-            <p>abcd@gmail.com</p>
+            <h6> <bold>Email</bold></h6>
+            <p><a href="mailto:harshanapanagoda2000@gmail.com">harshanapanagoda2000@gmail.com</a></p>
           </div>
         </div>
         <div class="contact-item">
           <div class="c__icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
           <div class="contact-info">
-            <p>Address</p>
-            <p>Fatikchhari, Chittagong, Bangladesh</p>
+            <h6><bold>Address</bold></h6>
+            <p>Piliyandala, Colombo, Sri Lanka</p>
           </div>
         </div>
       </div>
@@ -389,14 +358,15 @@
     <footer>
       <div class="footer container">
         <h1>HARSHANA PANAGODA</h1>
-        <p>Follow me through these!</p>
+        <p>Connect with me!</p>
         <div class="social-container">
           <div class="social-icon">
-            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" alt="Facebook" /></a>
-            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" alt="Instagram" /></a>
-            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" alt="Twitter" /></a>
-            <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" alt="Behance" /></a>
-          </div>
+            <a href="https://www.facebook.com/harshanadilshan.panagoda?mibextid=LQQJ4d" target="_blank"><img src="./assets/footer_icon/facebook-circle.svg" alt="Facebook" /></a>
+            <a href="https://www.instagram.com/harshana_panagoda?igsh=b2NoeXA4OHFjb3dj&utm_source=qr" target="_blank"><img src="./assets/footer_icon/icons8-instagram-logo.svg" alt="Instagram" /></a>
+            <a href="https://github.com/HarshanaPanagoda" target="_blank"><img src="./assets/footer_icon/icons8-github.svg" alt="Github" /></a>
+            <a href="https://www.linkedin.com/in/harshana-panagoda-dilshan" target="_blank"><img src="./assets/footer_icon/icons8-linkedin.svg" alt="Linkedin" /></a>
+        </div>
+        
         </div>
       </div>
     </footer>

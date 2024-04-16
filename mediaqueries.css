@@ -1,72 +1,115 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #projects {
-    height: fit-content;
+@media screen and (min-width: 1201px) {
+  .exp-details-container {
+    padding: 1rem;
   }
   .contact-item {
     flex: 0 0 30%; /* Show 3 items in the same row */
   }
+
+  .project-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
+  section {
+    padding-top: 9vh;
+    margin: 2rem 4rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+  }
+
   #desktop-nav {
     display: none;
   }
   #hamburger-nav {
     display: flex;
-    justify-content: space-between; /* Adjust alignment for better mobile experience */
+    justify-content: space-between;
     padding: 20px; /* Add padding for better spacing between the corners*/
   }
-  #experience {
-    margin-top: 10rem;
-  }
-  .experience-details-container {
-    margin-top: 2rem;
-  }
+
   #profile,
   .section-container {
     display: block;
   }
+
+  .profile__section__pic-container {
+    display: flex;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    padding-top: 3rem;
+  }
+
+  #experience {
+    margin-top: 500px;
+  }
+
+  .experience-sub-title {
+    font-size: 1.5rem;
+  }
+
+  .exp-item-container article {
+    flex: 0 1 calc(50% - 2rem); /* Reset width for one item per row on smaller screens */
+    max-width: calc(
+      50% - 2rem
+    ); /* Reset max-width for one item per row on smaller screens */
+  }
+
+  .project-grid {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
   section,
   .section-container {
     height: fit-content;
   }
-  section {
-    margin: 0 5%;
-  }
+
   .section__pic-container {
     width: 275px;
     height: 275px;
-    margin: 0 auto 2rem;
+    margin: 2rem;
   }
-  .about-containers {
-    margin-top: 0;
-  }
+
   .contact-items {
     flex-direction: column; /* Display items in a column for smaller screens */
+    max-width: 550px;
   }
   .contact-item {
-    flex: 0 0 auto; /* Let items take full width */
+    flex: 0 0 auto;
     margin-bottom: 20px; /* Add space between items */
+  }
+
+  #about {
+    padding-top: 8vh;
+  }
+  .about__section__pic-container {
+    display: flex;
+    margin-bottom: 3rem;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   #profile {
     height: 83vh;
     margin-bottom: 0;
+  }
+  .profile__section__pic-container {
+    display: flex;
+    height: 300px;
+    width: 300px;
+    margin: auto;
   }
   article {
     font-size: 1rem;
   }
 
-  .about-containers,
   .btn-container {
     flex-wrap: wrap;
   }
@@ -74,9 +117,7 @@
   .nav-links li a {
     font-size: 1rem;
   }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
+
   .logo {
     font-size: 2.2rem;
   }
@@ -107,6 +148,7 @@
     justify-content: space-between; /* Adjust alignment for better mobile experience */
     padding: 20px; /* Add padding for better spacing between the corners*/
   }
+
   .contact-item {
     padding: 15px; /* Add padding to each item */
   }
@@ -121,5 +163,76 @@
   .social-icon img {
     width: 40px;
     height: 40px;
+  }
+  .project-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+
+  #experience {
+    margin-top: 200px;
+  }
+
+  .experience-main-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .exp-details-container {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .exp-item-container article {
+    flex: 0 1 calc(100% - 2rem); /* Reset width for one item per row on smaller screens */
+    max-width: calc(
+      100% - 2rem
+    ); /* Reset max-width for one item per row on smaller screens */
+  }
+
+  section {
+    padding-top: 10vh;
+    margin: 2rem 4rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+  }
+  #about {
+    padding-top: 8vh;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #experience {
+    margin-top: 300px;
+  }
+
+  .profile__section__pic-container {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+  }
+
+  section {
+    padding-top: 8vh;
+    margin: 2rem 2rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+  }
+  #about {
+    padding-top: 8vh;
+  }
+  .about-pic {
+    border: 6px solid transparent;
+    border-radius: 2rem;
+    height: 180px;
+    width: 230px;
+    margin: auto;
+  }
+  .contact-info a {
+    color: #555555;
+    font-size: small;
   }
 }
