@@ -12,6 +12,21 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
   }
+
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+    margin-inline: 2.5rem;
+  }
+  .card__img {
+    width: 310px;
+  }
+  .card__data {
+    width: 200px;
+    padding-inline: 2.5rem;
+  }
+  .card__article {
+    margin: 2rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -93,6 +108,44 @@
     display: flex;
     margin-bottom: 3rem;
   }
+
+  .com-container {
+    margin-inline: 0.5rem;
+  }
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+  .card__img {
+    width: 280px;
+  }
+  .card__data {
+    width: 150px;
+    padding-inline: 2.5rem;
+  }
+  .card__article {
+    margin: 1rem;
+  }
+
+  .pro__title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  #back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 32px;
+    right: 20px;
+    background-size: 50px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .c__icon img {
+    width: 75px; /* Adjust icon size */
+    margin: 8px 7px; /* Center icon vertically */
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -131,8 +184,14 @@
     height: 46vw;
     justify-content: center;
   }
-  .section__text__p2 {
-    font-size: 1.25rem;
+
+  .pro__title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .animate-text span {
+    font-size: 20px;
   }
   .title {
     font-size: 2rem;
@@ -201,6 +260,61 @@
   #about {
     padding-top: 8vh;
   }
+  .com-container {
+    margin-inline: 0.5rem;
+  }
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.5rem;
+  }
+
+  .card__img {
+    width: 270px;
+    border-radius: 1.5rem;
+  }
+
+  .card__data {
+    width: 170px;
+    padding: 1rem;
+  }
+
+  #back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 32px;
+    right: 20px;
+    background-size: 40px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .description {
+    color: black;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    text-align: justify;
+  }
+
+  .com-title {
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .project-title {
+    font-size: 24px;
+  }
+
+  .c__icon img {
+    width: 65px; /* Adjust icon size */
+    margin: 3px 7px; /* Center icon vertically */
+  }
 }
 
 @media screen and (max-width: 570px) {
@@ -215,12 +329,29 @@
     margin: auto;
   }
 
+  .pro__title {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .animate-text span {
+    font-size: 15px;
+  }
+
   section {
     padding-top: 8vh;
     margin: 2rem 2rem;
     box-sizing: border-box;
     min-height: fit-content;
   }
+
+  .project-card {
+    padding: 0.7rem;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+  }
+
   #about {
     padding-top: 8vh;
   }
@@ -231,8 +362,92 @@
     width: 230px;
     margin: auto;
   }
-  .contact-info a {
-    color: #555555;
+
+  .com-container {
+    margin-inline: 0.5rem;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card__data {
+    width: 150px;
+    padding: 1rem;
+  }
+
+  .card__description {
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .card__title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+
+  .card__button {
+    text-decoration: none;
+    font-size: 0.813rem;
+  }
+  .card__article {
+    margin: 0.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .card__img {
+    width: 200px;
+    border-radius: 1.5rem;
+  }
+
+  .contact-info p {
+    margin: 3px 0; /* adjust margin for the paragraph */
+    padding: 0 1rem; /* Add padding to the paragraph */
+    font-size: 10px;
+  }
+
+  .contact-info h6 {
+    margin: 3px 0; /* adjust margin for the heading */
+    padding: 0 1rem; /* Add padding to the heading */
     font-size: small;
+  }
+
+  .c__icon img {
+    width: 50px; /* Adjust icon size */
+    margin: 3px 7px; /* Center icon vertically */
+  }
+
+  #back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-size: 35px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .description {
+    color: black;
+    font-weight: normal;
+    font-size: small;
+    line-height: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    text-align: justify;
+  }
+
+  .com-title {
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .project-title {
+    font-size: 22px;
   }
 }

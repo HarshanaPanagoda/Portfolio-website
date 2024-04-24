@@ -203,16 +203,59 @@ a:hover {
   font-weight: 400;
 }
 
-.section__text__p2 {
+.pro__title {
+  font-size: 3rem;
+  text-align: center;
+}
+.animate-text {
   font-size: 1.75rem;
   margin-bottom: 1rem;
   font-weight: 600;
+  margin: 0;
+  overflow: hidden;
 }
+
+.animate-text span {
+  font-size: 30px;
+  color: crimson;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 46px;
+  display: none;
+}
+
+.animate-text span.text-in {
+  display: block;
+  animation: textIn 0.5s ease;
+}
+
+.animate-text span.text-out {
+  animation: textOut 0.5s ease;
+}
+
+@keyframes textIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes textOut {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
 .description {
   color: black;
   font-weight: normal;
+  font-size: medium;
   line-height: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   margin-top: 2rem;
   text-align: justify;
 }
@@ -222,7 +265,7 @@ a:hover {
   text-align: center;
 }
 
-/* BUTTON */
+/* BUTTONS */
 
 .btn-container {
   display: flex;
@@ -280,7 +323,7 @@ a:hover {
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 2rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .exp-details-container {
@@ -363,7 +406,7 @@ a:hover {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
 .project-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   transition: all 0.3s ease-in-out;
 }
 
@@ -402,6 +445,133 @@ a:hover {
   text-align: justify;
 }
 
+.com-title {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.com-container {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+}
+
+.card__container {
+  display: grid;
+  row-gap: 3.5rem;
+}
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__img {
+  width: 300px;
+  border-radius: 1.5rem;
+}
+
+.card__data {
+  width: 200px;
+  background-color: #f3eed9;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.688);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+.card__description {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+  color: #29323c;
+  font-weight: 500;
+}
+
+.card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 0.75rem;
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #555555;
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+/* card article animation */
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+
+/* Card animation */
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
 /* CONTACT */
 #contact {
   padding-bottom: 4rem;
@@ -415,7 +585,7 @@ a:hover {
 
 .contact-item {
   flex: 0 0 30%; /* Each item occupies 30% of the container */
-  box-shadow: 0px 0px 18px 0 #0000002c;
+  box-shadow: 0px 0px 18px 0 #00000032;
   transition: 0.3s ease box-shadow;
   border-radius: 1rem;
 }
@@ -425,19 +595,20 @@ a:hover {
 }
 
 .c__icon img {
-  width: 80px; /* Adjust icon size */
-  margin: 5px 20px; /* Center icon vertically */
+  width: 75px; /* Adjust icon size */
+  margin: 5px 10px; /* Center icon vertically */
 }
 
 .contact-info p {
-  margin: 5px 0; /* Remove left padding and adjust margin for the paragraph */
-  padding: 0 1rem; /* Add padding to the paragraph */
+  margin: 5px 0;
+  padding: 0 1.5rem 1rem; /* Combining padding properties */
+  font-size: medium;
 }
 
 .contact-info h6 {
-  margin: 5px 0; /* Remove left padding and adjust margin for the heading */
-  padding: 0 1rem; /* Add padding to the heading */
-  font-size: small;
+  margin: 5px 0; /* adjust margin for the heading */
+  padding: 0 1.6rem; /* Add padding to the heading */
+  font-size: 14px;
 }
 
 .contact-info a {
@@ -452,7 +623,7 @@ a:hover {
 /* FOOTER SECTION */
 
 .footer {
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-image: linear-gradient(60deg, #29323c 0%, #485563bb 100%);
   padding: 20px;
   text-align: center;
 }
@@ -461,15 +632,30 @@ a:hover {
   font-size: 24px;
   margin-bottom: 10px;
   background-color: transparent;
-  color: #f3eed9;
+  background-image: linear-gradient(
+    to bottom,
+    #f3eed9,
+    #e7c899,
+    #e39d65,
+    #e16944,
+    #db143c
+  );
+  /* 
+  Define the standard property 'background-clip' for compatibility
+  with older browsers and Safari/Chrome.
+*/
+  background-clip: text; /* This property is well-supported across modern browsers without needing a prefix*/
+  -webkit-background-clip: text; /*vendor-prefixed property for older version of Safari and Chrome*/
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
 }
 
 .footer p {
   font-size: 16px;
-  color: crimson;
+  color: #e7c899;
   margin-bottom: 20px;
   background-color: transparent;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .social-container {
@@ -494,4 +680,60 @@ a:hover {
 }
 .social-icon a:hover {
   opacity: 0.6;
+}
+
+/*scroll button*/
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 32px;
+  right: 30px;
+  background-image: url("assets/footer_icon/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 60px; /* Adjust the size of the background image (icon) */
+  background-position: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 20%;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+}
+
+#back-to-top-btn:hover {
+  background-color: crimson;
+}
+
+.btnEntrance {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: btnEntrance;
+}
+
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.btnExit {
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+  animation-name: btnExit;
+}
+
+@keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
 }
