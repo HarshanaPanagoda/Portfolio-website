@@ -30,10 +30,9 @@ a,
 /* All ICONS */
 
 .icon {
-  height: 3rem;
   border-radius: 100%;
-  height: 30px;
-  width: 30px;
+  height: 45px;
+  width: 45px;
 }
 /* DEFAULT SECTIONS */
 
@@ -276,6 +275,7 @@ a:hover {
 
 .btn {
   font-weight: 600;
+  font-size: 14px;
   transition: all 300ms ease;
   padding: 1rem;
   width: 8rem;
@@ -284,41 +284,25 @@ a:hover {
 
 .btn-color-2 {
   border: rgb(53, 53, 53) 0.1rem solid;
-}
-
-.btn-color-2:hover {
-  cursor: pointer;
+  background: none;
 }
 
 .btn-color-2:hover {
   background: crimson;
   color: white;
+  border: rgb(255, 255, 255) 0.1rem solid;
+  cursor: pointer;
 }
 
 .btn-color-1:hover {
   background: rgb(0, 0, 0);
 }
 
-.btn-color-2 {
-  background: none;
-}
-
-.btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid;
-}
-
 /* EXPERIENCE SECTION */
-
-.experience-sub-title {
-  color: #555555;
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-}
 
 .experience-main-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
@@ -343,8 +327,10 @@ a:hover {
 }
 
 .exp-item-container article {
-  flex: 0 1 calc(33.33% - 2rem); /* Adjust width for three items per row */
-  max-width: calc(33.33% - 2rem); /* Adjust max-width for three items per row */
+  flex: 0 1 calc(20% - 2rem); /* Reset width for one item per row on smaller screens */
+  max-width: calc(
+    33% - 2rem
+  ); /* Reset max-width for one item per row on smaller screens */
 }
 
 /* PROJECTS SECTION */
@@ -419,7 +405,7 @@ a:hover {
 #about {
   position: relative;
   margin-bottom: 8rem;
-  padding-top: 18vh;
+  padding-top: 12vh;
 }
 
 .about-details-container {

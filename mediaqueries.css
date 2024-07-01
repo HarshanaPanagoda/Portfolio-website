@@ -1,7 +1,4 @@
 @media screen and (min-width: 1201px) {
-  .exp-details-container {
-    padding: 1rem;
-  }
   .contact-item {
     flex: 0 0 30%; /* Show 3 items in the same row */
   }
@@ -27,11 +24,14 @@
   .card__article {
     margin: 2rem;
   }
+  #experience {
+    margin-top: 1px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   section {
-    padding-top: 9vh;
+    padding-top: 6vh;
     margin: 2rem 4rem;
     box-sizing: border-box;
     min-height: fit-content;
@@ -53,22 +53,18 @@
 
   .profile__section__pic-container {
     display: flex;
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
     margin: auto;
-    padding-top: 3rem;
+    padding-top: 4rem;
   }
 
   #experience {
-    margin-top: 500px;
-  }
-
-  .experience-sub-title {
-    font-size: 1.5rem;
+    margin-top: 150px;
   }
 
   .exp-item-container article {
-    flex: 0 1 calc(50% - 2rem); /* Reset width for one item per row on smaller screens */
+    flex: 0 1 calc(33.33% - 2rem); /* Reset width for one item per row on smaller screens */
     max-width: calc(
       50% - 2rem
     ); /* Reset max-width for one item per row on smaller screens */
@@ -102,7 +98,7 @@
   }
 
   #about {
-    padding-top: 8vh;
+    padding-top: 6vh;
   }
   .about__section__pic-container {
     display: flex;
@@ -137,7 +133,7 @@
     position: fixed;
     bottom: 32px;
     right: 20px;
-    background-size: 50px;
+    background-size: 55px;
     width: 35px;
     height: 35px;
   }
@@ -150,7 +146,7 @@
 
 @media screen and (max-width: 800px) {
   #profile {
-    height: 83vh;
+    height: 80vh;
     margin-bottom: 0;
   }
   .profile__section__pic-container {
@@ -245,7 +241,7 @@
   }
 
   .exp-item-container article {
-    flex: 0 1 calc(100% - 2rem); /* Reset width for one item per row on smaller screens */
+    flex: 0 1 calc(50% - 2rem); /* Reset width for one item per row on smaller screens */
     max-width: calc(
       100% - 2rem
     ); /* Reset max-width for one item per row on smaller screens */
@@ -283,9 +279,9 @@
     position: fixed;
     bottom: 32px;
     right: 20px;
-    background-size: 40px;
-    width: 30px;
-    height: 30px;
+    background-size: 45px;
+    width: 35px;
+    height: 35px;
   }
 
   .description {
@@ -319,7 +315,14 @@
 
 @media screen and (max-width: 570px) {
   #experience {
-    margin-top: 300px;
+    margin-top: 150px;
+  }
+
+  .exp-item-container article {
+    flex: 0 1 calc(100% - 2rem); /* Reset width for one item per row on smaller screens */
+    max-width: calc(
+      100% - 2rem
+    ); /* Reset max-width for one item per row on smaller screens */
   }
 
   .profile__section__pic-container {
@@ -423,9 +426,9 @@
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background-size: 35px;
-    width: 25px;
-    height: 25px;
+    background-size: 50px;
+    width: 30px;
+    height: 30px;
   }
 
   .description {

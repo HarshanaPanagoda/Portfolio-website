@@ -5,6 +5,7 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
+
 /*animated text */
 
 const txts = document.querySelector(".animate-text").children,
@@ -65,4 +66,3 @@ backToTopButton.addEventListener("click", BackToTop);
 function BackToTop() {
   window.scrollTo(0, 0);
 }
-
